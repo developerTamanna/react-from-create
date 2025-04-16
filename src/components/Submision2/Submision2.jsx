@@ -5,7 +5,7 @@ const Submision2 = () => {
 
     //text function
 
-    const [name, setName] = useState('');
+const [name, setName] = useState('');
    
     //email function
 
