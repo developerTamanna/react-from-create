@@ -16,13 +16,25 @@ const Submision2 = () => {
 
 const [pass, setPass] = useState('')
 
+// error function
+
+const [ error, setError] = useState('')
+
 
 //onsubmit function
 const submitForm = (event)=>{
     event.preventDefault()
-    console.log(name)
-    console.log(email)
-    console.log(pass)
+    if(pass.length <8 ){
+        setError('your password is incorrect')
+    }
+    else{
+        setError('')
+        console.log(name)
+        console.log(email)
+        console.log(pass)
+    }
+
+   
 }
 
 // const nameInput=(e)=>{
@@ -43,6 +55,9 @@ const submitForm = (event)=>{
 <br/>
 
 <input onChange={(event)=>{setPass(event.target.value)}} className='border border-blue-400 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' type="password" name="" placeholder='enter your password' required/>
+<br/>
+<br/>
+   <small className='text-red-800 font-semibold'>{error}</small>
 
 <br/>
 <br/>
