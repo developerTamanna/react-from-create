@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 const SubmitFrom = () => {
     //name function    
   const [text, setText] = useState('');
-//   console.log(text)
+  console.log(text)
 const [email, setEmail] = useState('');
 console.log(email)
+
+const [pass, setPass] = useState('');
+console.log(pass)
 
     const submitForm =(event)=>{
         event.preventDefault()
@@ -26,6 +29,13 @@ console.log(email)
         setEmail(event.target.value)
     }
 
+
+    //password function
+const passwordValue =(event)=>{
+    setPass(event.target.value)
+}
+    
+
     return (
 <div className='border p-2 text-center bg-red-50 rounded-md'>
 
@@ -43,7 +53,7 @@ console.log(email)
 <input onChange={emailValue} className='border border-blue-400 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ' type="email" name="email" placeholder='type your email' />
 <br/>
 <br/>
-<input className='border border-blue-400 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' type="password" name="password" />
+<input onChange={passwordValue} className='border border-blue-400 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' type="password" name="password" />
 
 <br/>
 <br/>
