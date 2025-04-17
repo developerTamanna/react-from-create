@@ -6,7 +6,7 @@ const SubmitFrom = () => {
   console.log(text)
 const [email, setEmail] = useState('');
 console.log(email)
-
+          
 const [pass, setPass] = useState('');
 console.log(pass)
 
